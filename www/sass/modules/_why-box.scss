@@ -1,0 +1,12 @@
+#why-box {
+	position: relative;
+	margin-top: -40px;
+
+	.highlight {
+		@extend %white-border;
+		p {
+			margin-bottom: 5px;
+			font-size: 200%;
+		}
+	}
+}

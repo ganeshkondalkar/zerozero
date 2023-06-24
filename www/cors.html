@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>CORS Request Example</title>
+	
+	<link rel="shortcut icon" href="img/fav-icon.png" type="favicon/ico" />
+
+	<style></style>
+</head>
+<body id="cors-request-page">
+
+	
+
+<!-- CDN Paths -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script>
+	$(function(){
+		/*$.getJSON("http://localhost:1985/data/names.json", function(data){
+			debugger;
+			var html = "";
+			$.each(data, function(i, e){
+				html += '<div class="entry">';
+				html += '<h3 class="term">' + entry.term + '</h3>';
+			});
+			$("#dictionary").html(html);
+		});*/
+		//
+
+		$.ajax({
+			type: "GET",
+			url: "http://www.luxustower.com/data/names.json",
+			dataType: "json",
+			xhrFields: {
+				'Access-Control-Allow-Origin': true
+			}
+		}).done(function(data, textStatus, jqXHR){
+			console.log('Successful!');
+		}).fail(function(jqXHR, textStatus, errorThrown){
+			// Once the above ajaxRequest Failed
+			// this callback will fire
+			console.log('Failure!');
+		});
+	});
+</script>
+
+</body>
+</html>

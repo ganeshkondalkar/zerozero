@@ -1,0 +1,118 @@
+body {
+	font-family: 'Open Sans Condensed';
+	font-size: 16px;
+	color: #595a5c;
+	background: #e7e7e7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "PT Sans";
+	font-weight: 700;
+}
+
+/*
+	--------------
+	COMMON COMPONENTS
+	--------------
+*/
+
+/*
+	--------------
+	COMPONENT-01: To create a Vertically centered elements
+	--------------
+*/
+%block {
+
+	&:before {
+		content: " ";
+		height: 100%;
+	}
+
+	&:before,
+	%inner {
+		float: none;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	/* %inner {
+		width: auto;
+	} */
+}
+
+/*
+	--------------
+	COMPONENT-02: To create a White Bordered Box with bottom border extended.
+	--------------
+*/
+%white-border {
+	border: 10px solid #fff;
+	padding: 70px 20px 30px;
+
+	hr {
+		border-color: #939598;
+		margin: 0 -60px;
+
+		@media screen and (max-width: 767px) {
+			margin: 0 -20px;
+		}
+	}
+
+	h2 {
+		margin-top: 0;
+		color: #000;
+		font-size: 200%;
+	}
+
+	p {
+		font-size: 150%;
+		font-weight: 300;
+		color: #808285;
+	}
+}
+
+/*
+    All components should have a same margin-top
+*/
+%mrgn-top {
+	margin-top: 150px;
+}
+
+#main-content {
+	margin-top: -5px;
+}
+
+#page-widgets {
+	padding-bottom: 50px;
+}
+
+/* Video Components */
+.video-box.inactive {
+	position: absolute;
+	top: 0; left: 0;
+	z-index: -1;
+}
+
+footer {
+	float: right;
+	font-size: 140%;
+	text-align: right;
+	margin-top: -5%;
+	position: relative;
+	bottom: 0;
+	right: 0;
+
+	@media screen and (max-width: 767px) {
+		margin-top: 5%;
+	}
+
+	span {
+		font-weight: bold;
+	}
+
+	address {
+		font-size: 65%;
+		letter-spacing: .5px;
+		margin-bottom: 0;
+	}
+}

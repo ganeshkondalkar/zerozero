@@ -1,0 +1,25 @@
+#work-model {
+	position: relative;
+	@extend %mrgn-top;
+
+	.row {
+		margin-left: -30px;
+		margin-right: -30px;
+	}
+
+	.highlight {
+		@extend %white-border;
+		margin-top: -40px;
+	}
+
+	.info-graph,
+	.info-graph-mobile {
+		padding-top: 50px;
+		overflow: hidden;
+	}
+
+	.info-graph-mobile {
+		margin: 0 auto;
+		width: 75%;
+	}
+}

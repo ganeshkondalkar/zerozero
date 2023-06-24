@@ -1,0 +1,68 @@
+/*#features-box {
+    .icon {
+        display: block;
+        height: 76px;
+        width: 181px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #features-box .feature {
+        margin-bottom: 30px;
+    }
+    #features-box .feature:last-child {
+        margin-bottom: 0;
+    }
+}
+
+#features-box .feature .icon {
+    background: url("../img/sprites-features.png") no-repeat;
+}
+
+#features-box .dgtl .icon {
+    background-position: 0 0;
+}
+
+#features-box .mdia .icon {
+    background-position: 0 -86px;
+}
+
+#features-box .prnt .icon {
+    background-position: 0 -172px;
+}
+*/
+#features-box {
+    @extend %mrgn-top;
+
+    .icon {
+        display: block;
+        height: 76px;
+        width: 181px;
+    }
+
+    .feature {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 30px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .feature .icon {
+        background: url("../img/sprites-features.png") no-repeat;
+    }
+
+     .dgtl .icon {
+        background-position: 0 0;
+    } 
+
+    .mdia .icon {
+        background-position: 0 -86px;
+    }
+
+    .prnt .icon {
+        background-position: 0 -172px;
+    }
+}

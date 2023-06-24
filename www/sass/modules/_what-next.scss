@@ -1,0 +1,54 @@
+#what-next {
+	@extend %mrgn-top;
+
+	hr {
+		border-color: inherit;
+		clear: both;
+	}
+
+	.form-box {
+		position: relative; // footer is absolute to this.
+
+		p {
+			font-size: 30px;
+			font-weight: 300;
+			color: #808285;
+		}
+	}
+
+	form {
+		
+		.error {
+			display: none;
+		}
+
+		.has-error .error {
+			display: block;
+		}
+
+		.btn {
+			color: #fff;
+			margin: 40px 0 0;
+			width: 200px;
+			border-radius: 0;
+			background-color: #231f20;
+
+			@media screen and (max-width: 767px) {
+				margin: 20px 0 0;
+				width: 100%;
+			}
+		}
+
+		.form-control {
+			margin: 5px 0 15px;
+			border-radius: 0;
+			background-color: #d1d3d4;
+		}
+
+		textarea.form-control {
+			height: 250px;
+		}
+	}
+
+
+}

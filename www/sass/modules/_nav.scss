@@ -1,0 +1,77 @@
+#nav-box {
+	z-index: 2;
+	right: 10px;
+	position: absolute;
+	top: 10px;
+
+	.desktop & {
+		.dropdown:hover > .dropdown-menu {
+			display: block;
+		}
+	}
+
+	.mobile & {
+
+		.dropdown-menu {
+			background-color: rgba(255, 255, 255,.6);
+
+			& > li > a {
+				color: #000;
+			}
+		}
+	}
+
+	.desktop &,
+	.mobile & {
+		position: fixed;
+
+		.dropdown-menu-right {
+			right: 100%;
+			top: -10%;
+		}
+	}
+
+	.desktop & {
+		top: 50%;
+		
+		.dropdown-menu-right {
+			top: -200%;
+		}
+	}
+
+	.dropdown-menu {
+		border: none;
+		background: none;
+		border-radius: 0;
+		box-shadow: none;
+		
+		& > li > a {
+			color: #fff;
+			font-size: 20px;
+			font-weight: 700;
+		}
+
+		& > li > a:focus,
+		& > li > a:hover {
+			color: #e64e4e;
+			background: none;
+		}
+	}
+
+
+	.nav > li > a {
+		padding: 5px;
+		border-radius: 2px;
+		background: rgba(231,232,233,0.3);
+	}
+
+
+	.icon-bar {
+		display: block;
+	    width: 22px;
+	    height: 2px;
+	    margin-bottom: 2px;
+	    border-radius: 1px;
+	    background-color: #888;
+	}
+}
